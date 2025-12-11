@@ -1,259 +1,248 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guía de Trámites | Tu tiempo vale oro</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlexMap - Orientación Universitaria</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        @keyframes slideIn {
-            from {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .modal.active {
-            display: flex;
-        }
-
-        .modal-content {
-            animation: slideIn 0.3s ease;
+        body {
+            font-family: 'Poppins', sans-serif;
         }
     </style>
 </head>
-<body class="bg-gradient-to-b from-slate-50 to-blue-50 text-gray-800 min-h-screen">
-    <header class="text-center py-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg">
-        <div class="max-w-6xl mx-auto px-5">
-            <h1 class="text-6xl font-bold mb-5 drop-shadow-lg">📋 Guía de Trámites</h1>
-            <p class="text-2xl mb-3 opacity-95 font-light">Tu tiempo vale oro. Encuentra en segundos guías claras y actualizadas.</p>
-            <div class="flex justify-center gap-6 mt-10 flex-wrap">
-                <div class="flex items-center gap-2 text-lg bg-white/20 px-6 py-3 rounded-full backdrop-blur font-semibold">⏳ Ahorra tiempo</div>
-                <div class="flex items-center gap-2 text-lg bg-white/20 px-6 py-3 rounded-full backdrop-blur font-semibold">🧠 Evita confusiones</div>
-                <div class="flex items-center gap-2 text-lg bg-white/20 px-6 py-3 rounded-full backdrop-blur font-semibold">📌 Info centralizada</div>
-            </div>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- NAVBAR -->
+    <header class="w-full py-5 bg-white shadow fixed top-0 left-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-6">
+            <h1 class="text-2xl md:text-3xl font-bold text-blue-700 tracking-wide">FLEXMAP</h1>
+            <a href="#registro"
+                class="hidden md:block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-5 rounded-full shadow">
+                Descubre FlexMap
+            </a>
         </div>
     </header>
 
-    <div class="bg-white rounded-3xl p-12 my-12 max-w-4xl mx-auto shadow-xl">
-        <h2 class="text-center text-blue-600 mb-10 text-4xl font-bold">¿Qué necesitas hoy?</h2>
-        
-        <div class="relative mb-10">
-            <input type="text" class="w-full px-6 py-4 text-lg border-2 border-blue-200 rounded-full outline-none transition-all focus:border-blue-600 focus:ring-4 focus:ring-blue-100" id="searchInput" placeholder="Busca tu trámite aquí...">
-            <span class="absolute right-6 top-1/2 -translate-y-1/2 text-2xl text-blue-600">🔍</span>
+    <!-- HERO -->
+    <section class="pt-32 pb-20 bg-gradient-to-b from-blue-50 to-gray-50">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+            <!-- Texto principal -->
+            <div>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-5">
+                    Oriéntate en tu campus <br> <span class="text-blue-600">en solo minutos</span>
+                </h2>
+                <p class="text-lg md:text-xl text-gray-600 mb-8">
+                    FlexMap es la nueva app que te guía paso a paso para encontrar oficinas, completar trámites y
+                    moverte por el campus sin confundirte.
+                </p>
+                <a href="#registro"
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-7 rounded-full shadow-xl transition text-lg">
+                    ¡Quiero probar FlexMap!
+                </a>
+            </div>
+
+            <!-- Imagen hero -->
+            <div class="flex justify-center">
+                <img src="mockup-hero.png" alt="Mockup FlexMap" class="w-80 md:w-[420px] rounded-xl shadow-xl">
+            </div>
+
         </div>
+    </section>
 
-        <div class="tramites-list space-y-4" id="tramitesList">
-                <div class="tramite-card bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-2xl cursor-pointer transition-all border-2 border-blue-200 hover:border-blue-500 hover:shadow-xl hover:-translate-y-2" data-tramite="titulo">
-                    <h3 class="text-blue-700 mb-2 text-2xl font-bold">🎓 Título Profesional</h3>
-                    <p class="text-gray-600 mb-4 text-lg">Pasos completos para obtener tu título universitario</p>
-                    <div class="flex gap-2">
-                        <span class="inline-block bg-yellow-400 text-gray-900 px-4 py-2 rounded-full text-sm font-bold">Premium S/ 2</span>
-                        <span class="inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">15 min</span>
-                    </div>
+
+    <!-- BENEFICIOS -->
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        
+        <h3 class="text-3xl md:text-4xl font-bold text-center mb-14">
+            ¿Por qué usar <span class="text-blue-600">FlexMap</span>?
+        </h3>
+
+        <div class="grid md:grid-cols-3 gap-10">
+
+            <!-- Explora el Campus -->
+            <div class="bg-gray-50 p-8 rounded-2xl shadow hover:shadow-lg transition text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                    class="w-14 h-14 mx-auto mb-4 text-blue-600" 
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0Z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                </svg>
+
+                <h4 class="text-xl font-bold mb-3">Explora el Campus</h4>
+                <p class="text-gray-600">Localiza oficinas, aulas y servicios sin perderte ni preguntar.</p>
+            </div>
+
+            <!-- Guía de Trámites -->
+            <div class="bg-gray-50 p-8 rounded-2xl shadow hover:shadow-lg transition text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                    class="w-14 h-14 mx-auto mb-4 text-blue-600"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                </svg>
+
+                <h4 class="text-xl font-bold mb-3">Guía de Trámites</h4>
+                <p class="text-gray-600">Sigue pasos claros para completar tus trámites universitarios.</p>
+            </div>
+
+            <!-- Grupo de amigos -->
+            <div class="bg-gray-50 p-8 rounded-2xl shadow hover:shadow-lg transition text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                    class="w-14 h-14 mx-auto mb-4 text-blue-600" 
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="8.5" cy="7" r="4"/>
+                    <path d="M20 8a4 4 0 1 0 0 8"/>
+                </svg>
+
+                <h4 class="text-xl font-bold mb-3">Grupo de Amigos</h4>
+                <p class="text-gray-600">Visualiza la ubicación de tus amigos dentro del campus.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-blue-50">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+            <!-- Video / imagen demo -->
+            <div>
+                <img src="demo-video-preview.jpg" alt="Demo FlexMap" class="rounded-xl shadow-xl">
+                <!-- Reemplazar demo-video-preview.jpg con tu imagen o video -->
+            </div>
+
+            <div>
+                <h3 class="text-3xl font-bold mb-5">Mira cómo funciona FlexMap</h3>
+                <p class="text-gray-600 text-lg mb-8">
+                    Una experiencia simple, visual e intuitiva, cuidadosamente diseñada para estudiantes que ingresan a
+                    la universidad por primera vez y necesitan una guía clara y confiable.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="registro" class="py-20 bg-white">
+        <div class="max-w-lg mx-auto px-6">
+            <h3 class="text-3xl font-bold text-center mb-6">Obtén acceso anticipado</h3>
+            <p class="text-center text-gray-600 mb-8">Regístrate para recibir la primera versión de FlexMap y ser uno de
+                los primeros en probarla.</p>
+
+            <div class="bg-gray-50 p-10 rounded-2xl shadow-xl">
+                <form class="space-y-5">
+                    <input type="text" placeholder="Tu nombre"
+                        class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-600">
+                    <input type="email" placeholder="Tu correo"
+                        class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-600" required>
+
+                    <button
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg text-lg shadow-lg transition">
+                        Quiero acceso anticipado
+                    </button>
+                </form>
+                <p class="text-center text-gray-500 text-sm mt-3">No enviamos spam. Puedes darte de baja cuando quieras.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-28 bg-gradient-to-b from-gray-100 to-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-extrabold mb-4 text-gray-900 tracking-tight uppercase">Sobre Nosotros</h2>
+            <p class="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto mb-16 leading-relaxed">
+                Somos un equipo dedicado a transformar la forma en la que los estudiantes viven su experiencia
+                universitaria.
+            </p>
+            <div class="grid md:grid-cols-2 gap-12 mb-20 items-center">
+                <div class="flex justify-center">
+                    <img src="GRUPO.jpeg" alt="Equipo ZENAGA"
+                        class="rounded-2xl shadow-2xl w-full max-w-md object-cover">
                 </div>
+                <div>
+                    <div
+                        class="bg-white p-10 rounded-3xl shadow-2xl border-t-4 border-blue-600 text-left hover:shadow-[0_20px_40px_rgba(0,0,0,0.15)] transition">
 
-                <div class="tramite-card bg-gradient-to-br from-emerald-50 to-emerald-100 p-6 rounded-2xl cursor-pointer transition-all border-2 border-emerald-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-2" data-tramite="becas">
-                    <h3 class="text-emerald-700 mb-2 text-2xl font-bold">💰 Becas y Financiamiento</h3>
-                    <p class="text-gray-600 mb-4 text-lg">Cómo postular a becas universitarias</p>
-                    <div class="flex gap-2">
-                        <span class="inline-block bg-yellow-400 text-gray-900 px-4 py-2 rounded-full text-sm font-bold">Premium S/ 2</span>
-                        <span class="inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">10 min</span>
-                    </div>
-                </div>
+                        <div class="space-y-6 text-gray-700 text-base leading-relaxed">
+                            <p><span class="font-semibold text-blue-700">Nuestra Misión:</span>
+                                Acompañar a los estudiantes
+                                desde su primer día con una guía digital clara, accesible y eficiente que elimine la
+                                confusión y reduzca el estrés dentro del campus.</p>
 
-                <div class="tramite-card bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-2xl cursor-pointer transition-all border-2 border-orange-200 hover:border-orange-500 hover:shadow-xl hover:-translate-y-2" data-tramite="matricula">
-                    <h3 class="text-orange-700 mb-2 text-2xl font-bold">📝 Pago de Matrículas</h3>
-                    <p class="text-gray-600 mb-4 text-lg">Proceso completo de matrícula universitaria</p>
-                    <div class="flex gap-2">
-                        <span class="inline-block bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold">Gratis</span>
-                        <span class="inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">8 min</span>
-                    </div>
-                </div>
+                            <p><span class="font-semibold text-blue-700">Nuestra Visión:</span> Convertirnos en la
+                                plataforma
+                                líder de orientación universitaria en Latinoamérica, facilitando la vida de millones de
+                                estudiantes y mejorando su adaptación al entorno académico.</p>
 
-                <div class="tramite-card bg-gradient-to-br from-pink-50 to-pink-100 p-6 rounded-2xl cursor-pointer transition-all border-2 border-pink-200 hover:border-pink-500 hover:shadow-xl hover:-translate-y-2" data-tramite="solicitudes">
-                    <h3 class="text-pink-700 mb-2 text-2xl font-bold">📄 Solicitudes Universitarias</h3>
-                    <p class="text-gray-600 mb-4 text-lg">Cómo hacer solicitudes formales en tu universidad</p>
-                    <div class="flex gap-2">
-                        <span class="inline-block bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold">Gratis</span>
-                        <span class="inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">5 min</span>
+                            <p><span class="font-semibold text-blue-700">Nuestros Valores:</span> Innovación,
+                                accesibilidad,
+                                empatía y compromiso con el bienestar estudiantil en cada una de nuestras soluciones.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="max-w-6xl mx-auto px-5">
-        <footer class="text-center py-12 text-gray-700">
-            <p class="text-lg font-semibold">💡 ¿Necesitas ayuda con otro trámite? Contáctanos</p>
-            <p class="mt-3 text-sm opacity-75">© 2024 Guía de Trámites</p>
-        </footer>
-    </div>
-
-    <div class="modal fixed inset-0 hidden items-center justify-center bg-black/40 z-50 backdrop-blur-sm" id="modal">
-        <div class="modal-content bg-white p-12 rounded-3xl max-w-2xl max-h-80vh overflow-y-auto relative shadow-2xl">
-            <span class="close-btn absolute top-4 right-6 text-3xl cursor-pointer text-gray-400 hover:text-gray-600 transition-colors font-bold" id="closeBtn">×</span>
-            <div id="modalBody"></div>
+        <h3 class="text-4xl font-extrabold mb-4 text-gray-900 tracking-tight uppercase text-center">
+            Quiénes <span class="text-blue-600">Somos</span>
+        </h3>
+        <div class="max-w-4xl mx-auto bg-white p-10 md:p-12 rounded-3xl shadow-2xl border border-gray-200">
+            <p class="text-gray-700 text-lg md:text-xl leading-relaxed">
+                “Hola, somos <span class='font-semibold text-blue-700'>ZENAGA</span>, y desarrollamos <span
+                    class='font-semibold text-blue-700'>FlexMap</span>, una aplicación que ayuda a los estudiantes
+                nuevos que llegan al campus y no saben dónde están las oficinas ni cómo realizar sus trámites. FlexMap
+                muestra un mapa interactivo, rutas guiadas y pasos claros para que no se pierdan ni se
+                confundan.<br><br>
+                Nos enfocamos en jóvenes de 16 a 24 años, muchos de ellos provenientes de otras provincias, que buscan
+                una forma rápida y sencilla de orientarse y entender qué deben hacer.<br><br>
+                Gracias a FlexMap, miles de estudiantes pueden encontrar cualquier lugar del campus en minutos, reducir
+                el estrés del primer día y completar sus trámites de forma clara y sin complicaciones.”
+            </p>
         </div>
-    </div>
 
-    <script>
-        const tramitesData = {
-            titulo: {
-                title: "🎓 Obtener Título Profesional",
-                premium: true,
-                preview: [
-                    { title: "Paso 1", content: "Culminar todos los créditos del plan de estudios" },
-                    { title: "Paso 2", content: "Aprobar el trabajo de tesis o modalidad de titulación" },
-                    { title: "Paso 3", content: "Vista previa - Contenido completo disponible en versión premium" }
-                ],
-                fullSteps: [
-                    { title: "Paso 1", content: "Culminar todos los créditos del plan de estudios y obtener constancia de egresado" },
-                    { title: "Paso 2", content: "Aprobar el trabajo de tesis o modalidad de titulación elegida" },
-                    { title: "Paso 3", content: "Solicitar certificado de estudios en secretaría académica" },
-                    { title: "Paso 4", content: "Pagar los derechos de título en tesorería (aproximadamente S/ 300-500)" },
-                    { title: "Paso 5", content: "Presentar expediente completo con todos los documentos requeridos" },
-                    { title: "Paso 6", content: "Esperar la resolución de otorgamiento del grado (15-30 días)" },
-                    { title: "Paso 7", content: "Recoger tu título profesional en la oficina de grados y títulos" }
-                ]
-            },
-            becas: {
-                title: "💰 Becas y Financiamiento Estudiantil",
-                premium: true,
-                preview: [
-                    { title: "Paso 1", content: "Identifica las becas disponibles en PRONABEC" },
-                    { title: "Paso 2", content: "Revisa los requisitos específicos de cada beca" },
-                    { title: "Paso 3", content: "Vista previa - Guía completa disponible en versión premium" }
-                ],
-                fullSteps: [
-                    { title: "Paso 1", content: "Ingresa a www.pronabec.gob.pe y revisa las convocatorias vigentes" },
-                    { title: "Paso 2", content: "Revisa requisitos: promedio mínimo, situación socioeconómica, documentos" },
-                    { title: "Paso 3", content: "Prepara certificados de notas, DNI, recibos de servicios, declaración jurada" },
-                    { title: "Paso 4", content: "Registra tu postulación en la plataforma virtual antes de la fecha límite" },
-                    { title: "Paso 5", content: "Realiza la entrevista personal o evaluación socioeconómica si aplica" },
-                    { title: "Paso 6", content: "Consulta resultados en la fecha indicada en la convocatoria" },
-                    { title: "Paso 7", content: "Si quedas seleccionado, firma el contrato de beca y cumple las obligaciones" }
-                ]
-            },
-            matricula: {
-                title: "📝 Pago de Matrículas Universitarias",
-                premium: false,
-                steps: [
-                    { title: "Paso 1", content: "Verifica que no tengas deudas pendientes en tu universidad" },
-                    { title: "Paso 2", content: "Ingresa al sistema de matrícula de tu universidad en las fechas indicadas" },
-                    { title: "Paso 3", content: "Selecciona tus cursos según tu malla curricular y horarios" },
-                    { title: "Paso 4", content: "Genera tu recibo de pago y realiza el pago en banco o en línea" },
-                    { title: "Paso 5", content: "Confirma tu matrícula y verifica que aparezcan todos tus cursos registrados" }
-                ]
-            },
-            solicitudes: {
-                title: "📄 Solicitudes Universitarias",
-                premium: false,
-                steps: [
-                    { title: "Paso 1", content: "Identifica el tipo de solicitud: certificado, constancia, permiso, etc." },
-                    { title: "Paso 2", content: "Descarga el formato de solicitud desde la web de tu universidad" },
-                    { title: "Paso 3", content: "Llena el formulario con tus datos completos y especifica tu solicitud" },
-                    { title: "Paso 4", content: "Adjunta los documentos requeridos (DNI, recibo de pago si aplica)" },
-                    { title: "Paso 5", content: "Presenta la solicitud en mesa de partes o virtualmente según tu universidad" },
-                    { title: "Paso 6", content: "Recoge tu respuesta o documento en el plazo indicado (7-15 días)" }
-                ]
-                
-            }
-        };
 
-        const searchInput = document.getElementById('searchInput');
-        const tramitesList = document.getElementById('tramitesList');
-        const modal = document.getElementById('modal');
-        const modalBody = document.getElementById('modalBody');
-        const closeBtn = document.getElementById('closeBtn');
+        </div>
+    </section>
 
-        searchInput.addEventListener('input', (e) => {
-            const searchTerm = e.target.value.toLowerCase();
-            const cards = tramitesList.querySelectorAll('.tramite-card');
-            
-            cards.forEach(card => {
-                const text = card.textContent.toLowerCase();
-                card.style.display = text.includes(searchTerm) ? 'block' : 'none';
-            });
-        });
+    <footer class="py-14 bg-gray-900 text-gray-300">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10 text-center md:text-left">
+            <div>
+                <h4 class="text-2xl font-extrabold text-white tracking-wide mb-3">FLEXMAP</h4>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Tecnología creada para guiar, orientar y transformar la experiencia universitaria.
+                </p>
+            </div>
+            <div>
+                <h5 class="text-lg font-semibold text-white mb-3">Navegación</h5>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="#" class="hover:text-white transition">Inicio</a></li>
+                    <li><a href="#registro" class="hover:text-white transition">Registro</a></li>
+                    <li><a href="#" class="hover:text-white transition">Sobre Nosotros</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-lg font-semibold text-white mb-3">Contáctanos</h5>
+                <p class="text-gray-400 text-sm leading-relaxed">¿Tienes alguna consulta o propuesta?</p>
+                <p class="text-blue-400 font-semibold text-sm mt-1">zenaga.contact@gmail.com</p>
+            </div>
 
-        tramitesList.addEventListener('click', (e) => {
-            const card = e.target.closest('.tramite-card');
-            if (card) {
-                const tramiteId = card.dataset.tramite;
-                const tramite = tramitesData[tramiteId];
-                showModal(tramite);
-            }
-        });
 
-        function showModal(tramite) {
-            const isPremium = tramite.premium;
-            const steps = isPremium ? tramite.preview : tramite.steps;
-            
-            let modalContent = `<h2 class="text-blue-600 mb-6 text-3xl font-bold">${tramite.title}</h2>`;
-            
-            if (isPremium) {
-                modalContent += `
-                    <div class="bg-yellow-50 p-5 rounded-xl mb-6 border-l-4 border-yellow-400">
-                        <strong class="text-yellow-800">⭐ Contenido Premium</strong><br>
-                        <span class="text-yellow-700">Esta es una vista previa. Accede a la guía completa por solo S/ 2</span>
-                    </div>
-                `;
-            }
-            
-            modalContent += '<div class="my-6">';
-            steps.forEach(step => {
-                modalContent += `
-                    <div class="bg-blue-50 p-5 mb-4 rounded-xl border-l-4 border-blue-600">
-                        <h4 class="text-blue-700 mb-2 font-bold text-lg">${step.title}</h4>
-                        <p class="text-gray-700">${step.content}</p>
-                    </div>
-                `;
-            });
-            modalContent += '</div>';
-            
-            if (isPremium) {
-                modalContent += `
-                    <button class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-full font-bold cursor-pointer transition-all hover:shadow-lg hover:-translate-y-1 w-full mt-6 text-lg" onclick="handlePremiumPurchase('${tramite.title}')">
-                        🔓 Desbloquear Guía Completa - S/ 2
-                    </button>
-                `;
-            } else {
-                modalContent += `
-                    <button class="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-3 rounded-full font-bold cursor-pointer transition-all hover:shadow-lg hover:-translate-y-1 w-full mt-6 text-lg" onclick="handleFreeDownload('${tramite.title}')">
-                        📥 Guardar esta guía
-                    </button>
-                `;
-            }
-            
-            modalBody.innerHTML = modalContent;
-            modal.classList.remove('hidden');
-            modal.classList.add('active');
-        }
+        </div>
+        <div class="border-t border-gray-700 mt-10 pt-6 text-center">
+            <p class="text-xs text-gray-500">© 2025 ZENAGA - FlexMap. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
-        function handlePremiumPurchase(title) {
-            alert(`¡Gracias por tu interés!\n\nPara acceder a: "${title}"\n\nContáctanos por WhatsApp: [Tu número]\nO envía un correo a: tramites@ejemplo.com\n\nPago: S/ 2 vía Yape o transferencia.`);
-        }
-
-        function handleFreeDownload(title) {
-            alert(`✅ Guía guardada: "${title}"\n\n¿Te fue útil? Compártela con tus compañeros y síguenos para más guías.`);
-        }
-
-        closeBtn.addEventListener('click', () => {
-            modal.classList.add('hidden');
-            modal.classList.remove('active');
-        });
-
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.classList.add('hidden');
-                modal.classList.remove('active');
-            }
-        });
-    </script>
 </body>
+
 </html>
